@@ -1,8 +1,12 @@
 import React from "react";
-import { useLoaderData } from "react-router";
+import { useLoaderData, useParams } from "react-router";
 
 function UserDetails() {
   const user = useLoaderData();
+  const {userId} = useParams();
+  console.log(userId);
+  // const params = useParams();
+  // console.log(params.userId);
 
   const { website, name } = user;
   return (
